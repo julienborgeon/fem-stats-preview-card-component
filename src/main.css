@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 @font-face {
   font-display: swap;
   font-family: "Inter";
@@ -21,8 +23,6 @@
   font-weight: 400;
   src: url("/fonts/lexend-deca-v24-latin-regular.woff2") format("woff2");
 }
-
-@import "tailwindcss";
 
 @theme {
   --color-dark: hsl(233, 47%, 7%);
