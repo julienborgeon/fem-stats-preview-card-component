@@ -30,6 +30,8 @@
   --color-accent: hsl(277, 64%, 61%);
   --color-white-paragraph: hsla(0, 0%, 100%, 0.75);
   --color-white-stat: hsl(0 0% 100% / 0.6);
+  --color-selection: var(--color-accent);
+  --color-selection-foreground: #000;
   --font-sans:
     "Inter", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-lexend: "Lexend Deca", var(--font-sans);
@@ -62,4 +64,30 @@ body {
   background: var(--color-dark);
   color: white;
   font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--color-selection);
+  color: var(--color-selection-foreground);
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: var(--color-selection);
+  color: var(--color-selection-foreground);
+  text-shadow: none;
+}
+
+@media (forced-colors: active) {
+  ::selection {
+    background: Highlight;
+    color: HighlightText;
+  }
+}
+
+svg,
+img {
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
 }
