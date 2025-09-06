@@ -121,13 +121,11 @@ A few representative snippets:
 **1. Stats with `dl/dt/dd` (semantics + a11y)**
 
 ```html
-<dl class="grid gap-6 sm:grid-cols-3">
+<dl class="mt-8 grid gap-6 sm:grid-cols-3">
   <div>
     <dt class="sr-only">Companies</dt>
-    <dd class="text-2xl font-bold">10k+</dd>
-    <dd
-      class="font-lexend text-white-stat-heading text-sm tracking-widest uppercase"
-    >
+    <dd class="mb-1 text-2xl font-bold text-white">10k+</dd>
+    <dd class="font-lexend text-white-stat text-sm tracking-widest uppercase">
       Companies
     </dd>
   </div>
@@ -142,14 +140,15 @@ The `dl/dt/dd` tags offer a **native, SEO-friendly, semantic solution** for this
 ```css
 @import "tailwindcss";
 @theme {
-  --color-card: #1b1938;
-  --color-accent: #aa5cdb;
-  --color-white-paragraph: #ffffffbf;
-  --color-white-stat-heading: hsl(0 0% 100% / 0.6);
+  --color-dark: hsl(233, 47%, 7%);
+  --color-card: hsl(244, 37%, 16%);
+  --color-accent: hsl(277, 64%, 61%);
+  --color-white-paragraph: hsla(0, 0%, 100%, 0.75);
+  --color-white-stat: hsl(0 0% 100% / 0.6);
   --font-sans:
-    "Inter", system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    "Inter", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-lexend: "Lexend Deca", var(--font-sans);
-  --radius-card: 12px;
+  --radius-card: 8px;
   --breakpoint-lg: 1024px;
 }
 /* ... then I use text-white-paragraph, text-accent, rounded-card, lg:... */
@@ -169,12 +168,13 @@ This v4 model keeps the source of truth in CSS (no `tailwind.config.js` required
 ```css
 @layer components {
   .link {
-    @apply focus-visible:ring-accent focus-visible:ring-offset-card rounded-[2px] underline decoration-white/60 decoration-1 underline-offset-2 transition-colors duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+    @apply focus-visible:ring-accent focus-visible:ring-offset-dark rounded-[2px] underline decoration-white/60 decoration-1 underline-offset-2 transition-all duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
     text-decoration-skip-ink: auto;
   }
+
   @media (hover: hover) {
     .link:hover {
-      @apply decoration-accent underline-offset-4;
+      @apply decoration-accent text-white underline-offset-4;
     }
   }
 }
