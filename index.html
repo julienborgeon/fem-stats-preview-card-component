@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Stats preview card component</title>
+    <meta
+      name="description"
+      content="Frontend Mentor Challenge | Stats preview card component."
+    />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <meta name="googlebot" content="noindex, nofollow" />
+    <link
+      rel="preload"
+      href="/fonts/inter-v19-latin-700.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/inter-v19-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/lexend-deca-v24-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link href="/src/main.css" rel="stylesheet" />
+    <link
+      rel="canonical"
+      href="https://jb-fem-stats-preview-card.netlify.app/"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Stats preview card" />
+    <meta
+      property="og:title"
+      content="Stats preview card component by Julien Borgeon"
+    />
+    <meta
+      property="og:description"
+      content="Frontend Mentor Challenge | Stats preview card component."
+    />
+    <meta
+      property="og:url"
+      content="https://jb-fem-stats-preview-card.netlify.app/"
+    />
+    <meta
+      property="og:image"
+      content="https://jb-fem-stats-preview-card.netlify.app/og.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta
+      property="og:image:alt"
+      content="Preview card with purple overlay and business stats."
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Stats preview card component by Julien Borgeon"
+    />
+    <meta
+      name="twitter:description"
+      content="Frontend Mentor Challenge | Stats preview card component."
+    />
+    <meta
+      name="twitter:image"
+      content="https://jb-fem-stats-preview-card.netlify.app/og.jpg"
+    />
+  </head>
+  <body class="grid min-h-dvh place-items-center p-6">
+    <main id="content" class="mb-8 w-full max-w-xl self-end lg:max-w-5xl">
+      <article
+        class="bg-card rounded-card grid overflow-hidden shadow-xl lg:grid-cols-2"
+      >
+        <figure class="relative order-first lg:order-last">
+          <picture>
+            <source
+              media="(min-width: 1024px)"
+              srcset="/assets/image-header-desktop.jpg"
+              width="540"
+              height="446"
+            />
+            <img
+              src="/assets/image-header-mobile.jpg"
+              width="654"
+              height="480"
+              alt="Team working together at a table with laptops and notes"
+              class="block h-full w-full object-cover"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </picture>
+          <span
+            aria-hidden="true"
+            class="bg-accent absolute inset-0 opacity-70 mix-blend-multiply"
+          ></span>
+        </figure>
+
+        <div
+          class="p-8 text-center sm:p-12 lg:flex lg:h-full lg:flex-col lg:justify-between lg:p-16 lg:text-left"
+        >
+          <div class="space-y-6">
+            <header class="mb-8">
+              <h1
+                class="text-3xl/tight font-bold tracking-tight sm:text-4xl/tight lg:text-5xl/tight"
+              >
+                Get <span class="text-accent">insights</span> that help your
+                business grow.
+              </h1>
+            </header>
+
+            <p
+              class="text-white-paragraph max-w-prose text-base/relaxed sm:text-lg/relaxed"
+            >
+              Discover the benefits of data analytics and make better decisions
+              regarding revenue, customer experience, and overall efficiency.
+            </p>
+          </div>
+
+          <dl class="mt-8 grid gap-6 sm:grid-cols-3">
+            <div>
+              <dt class="sr-only">Companies</dt>
+              <dd class="mb-1 text-2xl font-bold text-white">10k+</dd>
+              <dd
+                class="font-lexend text-white-stat text-sm tracking-widest uppercase"
+              >
+                Companies
+              </dd>
+            </div>
+            <div>
+              <dt class="sr-only">Templates</dt>
+              <dd class="mb-1 text-2xl font-bold text-white">314</dd>
+              <dd
+                class="font-lexend text-white-stat text-sm tracking-widest uppercase"
+              >
+                Templates
+              </dd>
+            </div>
+            <div>
+              <dt class="sr-only">Queries</dt>
+              <dd class="mb-1 text-2xl font-bold text-white">12M+</dd>
+              <dd
+                class="font-lexend text-white-stat text-sm tracking-widest uppercase"
+              >
+                Queries
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </article>
+    </main>
+    <footer class="self-end">
+      <p class="attribution text-center text-sm text-white/70">
+        Challenge by
+        <a
+          class="link"
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Frontend Mentor</a
+        >. Coded by
+        <a class="link" href="https://www.julienborgeon.fr">Julien Borgeon</a>.
+      </p>
+    </footer>
+  </body>
+</html>
